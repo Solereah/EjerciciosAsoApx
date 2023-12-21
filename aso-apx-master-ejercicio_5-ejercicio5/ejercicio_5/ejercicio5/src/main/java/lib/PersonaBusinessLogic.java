@@ -52,7 +52,7 @@ public class PersonaBusinessLogic {
 		//La cadena puede contener letras, números, puntos, guiones bajos, signos de porcentaje, signos más y guiones.
 		//La cadena debe contener al menos un punto y una letra o un número después del punto.
 		//La cadena debe terminar con un punto y dos letras o números.
-		return correo.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+		return correo.matches("^[a-zA-Z]+@[a-zA-Z]+$");
 	}
 }
 }
