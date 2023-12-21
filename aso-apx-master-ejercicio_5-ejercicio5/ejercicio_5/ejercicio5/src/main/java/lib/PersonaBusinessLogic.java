@@ -48,10 +48,6 @@ public class PersonaBusinessLogic {
 	}
 
 	private static boolean validarCorreoElectronico(String correo) {
-		// La expresión regular valida si la cadena debe comenzar con una letra o un número.
-		//La cadena puede contener letras, números, puntos, guiones bajos, signos de porcentaje, signos más y guiones.
-		//La cadena debe contener al menos un punto y una letra o un número después del punto.
-		//La cadena debe terminar con un punto y dos letras o números.
 		return correo.matches("^[a-zA-Z]+@[a-zA-Z]+$");
 	}
 }
