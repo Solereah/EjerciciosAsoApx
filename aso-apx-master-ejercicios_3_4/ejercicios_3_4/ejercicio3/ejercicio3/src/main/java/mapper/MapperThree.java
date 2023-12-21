@@ -17,7 +17,7 @@ public class MapperThree {
          List<String> formattedProjectNames =
                  personInfoDTO.getProjects().stream()
                          .map(ProjectDTO::getName)
-                         .collect(Collectors.toList())
+                         .toList()
                          .stream().
                          flatMap(p -> Arrays.stream(p.split(",")))
                          .collect(Collectors.toList());

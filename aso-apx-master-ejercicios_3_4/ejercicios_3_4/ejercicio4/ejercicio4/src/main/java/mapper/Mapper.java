@@ -20,30 +20,22 @@ public class Mapper {
     public static List<ResponseDTO> mapListaEntradaToSalida(RequestDTO requestDTO) throws ParseException {
         String formatoFecha = "dd-MM-yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(formatoFecha);
-
         // Lista de salida
         List<ResponseDTO> listaSalida = new ArrayList<>();
-
+        int contador = 0;
         for (ContactDTO contactDTO : requestDTO.getContact()) {
-
-            for (String info : requestDTO.getRequest()) {
-                String[] campo = info.split(",");
-                ResponseDTO responseDTO = new ResponseDTO();
+            ResponseDTO responseDTO = new ResponseDTO();
+           String [] request = requestDTO.getRequest().get(contador).split(",");
 
                 responseDTO.setEmail(contactDTO.getEmail());
                 responseDTO.setCel(contactDTO.getCel());
-                responseDTO.setNombre(campo[0]);
-                responseDTO.setNumero(Integer.parseInt(campo[1]));
-                try {
-                    responseDTO.setFecha(sdf.parse(campo[2]));
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
+                responseDTO.setNombre(request[0]);
+                responseDTO.setNumero(Integer.parseInt(request[1]));
+                responseDTO.setFecha(sdf.parse(request[2]));
 
                 listaSalida.add(responseDTO);
+                contador++;
             }
-        }
-
         return listaSalida;
     }
 }
