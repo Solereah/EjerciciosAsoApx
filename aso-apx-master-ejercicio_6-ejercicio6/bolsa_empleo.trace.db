@@ -1,0 +1,6 @@
+2023-12-28 12:10:11.408644+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ASPIRANTES" already exists; SQL statement:
+CREATE TABLE `aspirantes` (`cedula` INTEGER , `nombreCompleto` VARCHAR(255) , `edad` INTEGER , `exp` INTEGER , `profesion` VARCHAR(255) , `telefono` VARCHAR(255) , PRIMARY KEY (`cedula`) ) [42101-224]
+2023-12-29 10:55:51.126081+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ASPIRANTES" already exists; SQL statement:
+CREATE TABLE `aspirantes` (`cedula` INTEGER , `nombreCompleto` VARCHAR(255) , `edad` INTEGER , `exp` INTEGER , `profesion` VARCHAR(255) , `telefono` VARCHAR(255) , PRIMARY KEY (`cedula`) ) [42101-224]
